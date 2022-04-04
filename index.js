@@ -59,25 +59,58 @@ console.log(checkThenumbers(50, 55));
 6) 
 
 Create a function to create a new string of specified copies (positive number) of a given string.
+U Whot now?
 */
-
+function createCopies(j, k) {
+    let createCopies = "";
+    for (let i = 0; i < k; i++) {
+        createCopies += j;
+    }
+    return createCopies;
+}
+console.log(createCopies(coolString, 10));
 /*
 
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
+theres a function for that....
 */
-
+function checkStart(q) {
+    if (q.startsWith("Los") || q.startsWith("New")) {
+        return q;
+    } else {
+        return "blank";
+    }
+}
+console.log(checkStart("Cat"));
+console.log(checkStart("Lost"));
 /*
 8)
-Create a function to calculate the sum of three elements of a given array of integers of length 3.
+Create a function to calculate the sum of three elements of a given array of integers(just say number) of length 3.
+(make 3 arrays each has 3 numbers get their sum.)
 */
+let numbersCatoCry = [11, 22, 33];
 
+function calculateThing2(a) {
+    return a[0] + a[1] + a[2];
+}
+console.log(calculateThing2(numbersCatoCry));
 /*
 
 9)
-Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
+Create a function to test whether an array of integers(numbers) of length 2 contains 1 or a 3. 
 */
-
+let gg = [1, 2];
+function testArray(x) {
+    if (x[0] === 1 || x[1] === 3) {
+        return true
+    } else if (x[0] === 3 || x[1] === 1) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(testArray(gg));
 /*
 
 10)
