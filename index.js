@@ -167,19 +167,66 @@ function findPosition(o) {
 }
 console.log(findPosition(lol));
 // 14)
-// Create a function to get the largest even number from an array of integers.
+// Create a function to get the largest even number from an array of integers(numbers).
+let evenAndBig = [1, 2, 3, 4, 5, 60, 7, 8, 9, 10];
+function findEvenAndBig(a) {
+    let even = [];
+    let bigBoi = 0;
+    for (let i = 0; i < a.length; i++) {
+        //check if even using %2 and put in array.
+        if (a[i] % 2 === 0) {
+            //now has array of even only.
+            even.push(a[i]);
+        }
+    }
+    for (let i = 0; i < even.length; i++) {
+        //nowfind the biggest, i guess it goes in loops?
+        if (even[i] > bigBoi) {
+            //it keeps rplacing the bigBoi with the bigger number.
+            bigBoi = even[i];
+        }
+    }
+    return bigBoi;
+}
+console.log(findEvenAndBig(evenAndBig));
 
 //where is 15????
 
 // 16)
-// Create a function to check from two given integers, whether one is positive and another one is negative.
+// Create a function to check from two given integers(numbers), whether one is positive and another one is negative.
+function positivuNegativu(p, n) {
+    if (p > 0 && n < 0) {
+        return true;
+    } else if (p < 0 && n > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(positivuNegativu(13, -13));
 
 // 17)
 // Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case.
-
+let theCoolerString = "the cooler string";
+function upDown(a) {
+    if (a.length < 3) {
+        return a.toUpperCase();
+    } else {
+        return a.slice(0, 3).toLowerCase() + a.slice(3).toUpperCase();
+    }
+}
+console.log(upDown(theCoolerString));
 // 18)
-// Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
-
+// Create a function to calculate the sum of the two given integers(numbers), If the sum is in the range 50..80 return 65 other wise return 80.
+function mathButActuallyNot(x, w) {
+    let mathTime = x + w;
+    if (mathTime >= 50 && mathTime <= 80) {
+        return 65;
+    } else {
+        return 80;
+    }
+}
+console.log(mathButActuallyNot(13, 42));
 // 19)
 // Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
 
@@ -197,3 +244,15 @@ console.log(findPosition(lol));
 
 // 20)
 // Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
+function shortKekw(d) {
+    //lets split them up.
+    let snipSnap = d.split(" ");
+    let holdThem = [];
+    for (let i = 0; i < snipSnap.length; i++) {
+        // push only first letters with [0]
+        holdThem.push(snipSnap[i][0]);
+    }
+    //assembly + upper case
+    return holdThem.join("").toUpperCase();
+}
+console.log(shortKekw("unoficial world union"));
