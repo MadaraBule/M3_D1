@@ -228,8 +228,29 @@ function mathButActuallyNot(x, w) {
 }
 console.log(mathButActuallyNot(13, 42));
 // 19)
-// Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
+// Create a function to convert a number to a string, the contents of which depend on the number's factors (the precentage thing divides leaves 0 as remsin).
+// Follow next example:
 
+//there is probably a shorter way for this, butif it works it works.
+function youAreNowAString(s) {
+    if (s % 3 === 0) {
+        return "Diego";
+    } else if (s % 5 === 0) {
+        return "Riccardo";
+    } else if (s % 7 === 0) {
+        return "Stefano";
+    } else if ((s % 3 === 0) && (s % 5 === 0)) {
+        return "DiegoRiccardo";
+    } else if ((s % 3 === 0) && (s % 7 === 0)) {
+        return "DiegoStefano";
+    } else if ((s % 5 === 0) && (s % 7 === 0)) {
+        return "RiccardoStefano";
+    }
+    else {
+        return s
+    }
+}
+console.log(youAreNowAString(12));
 // If the number has 3 as a factor, output 'Diego'.
 // If the number has 5 as a factor, output 'Riccardo'.
 // If the number has 7 as a factor, output 'Stefano'.
