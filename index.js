@@ -44,7 +44,13 @@ console.log(theBiggestOne(16, 21, 13));
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
 */
-
+function checkThenumbers(z, x) {
+    if (((z >= 40 && z <= 60) && (x >= 70 && x <= 100)) || ((x >= 40 && x <= 60) && (z >= 70 && z <= 100))); {
+        return true
+    } else {
+        return false
+    }
+}
 /*
 6) 
 
