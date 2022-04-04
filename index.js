@@ -115,9 +115,18 @@ console.log(testArray(gg));
 
 10)
 
-Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
-
-11)
+Create a function to test whether an array of integers of length 2 does not contain 1 or a 3 */
+function testArray(x) {
+    if (x[0] === 1 || x[1] === 3) {
+        return "contains 1 or 3";
+    } else if (x[0] === 3 || x[1] === 1) {
+        return "contains 1 or 3";
+    } else {
+        return "doesnt contain 1 or 3";
+    }
+}
+console.log(testArray(gg));
+/*11)
 
 Create a function to find the longest string from a given array of strings.
 
