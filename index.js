@@ -9,7 +9,7 @@ function sum(a, b) {
     } else {
         return a + b;
     }
-}
+};
 /*
 2)
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.
@@ -20,18 +20,26 @@ function smm(a, b) {
     } else {
         return false
     }
-}
+};
 /*
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
-*/
-
+need slice here*/
+let coolString = "this is the string that sits in this line";
+function deleteThing(e, r) {
+    return e.slice(0, r) + e.slice(r + 1);
+}
+console.log(deleteThing(coolString, 13));
 /*
-
 4)
  Create a function to find the largest of three given integers.
 */
+console.log(Math.max(16, 21, 13));
 
+function theBiggestOne(g, h, j) {
+    return Math.max(g, h, j);
+}
+console.log(theBiggestOne(16, 21, 13));
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
