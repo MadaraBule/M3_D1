@@ -43,14 +43,18 @@ console.log(theBiggestOne(16, 21, 13));
 /*
 5)
 Create a function to check whether two numbers are in range 40..60 or in the range 70..100 inclusive.
+do they both go in the same range? does each go in different? i dunno what to write ._.
 */
 function checkThenumbers(z, x) {
-    if (((z >= 40 && z <= 60) && (x >= 70 && x <= 100)) || ((x >= 40 && x <= 60) && (z >= 70 && z <= 100))); {
+    if ((z >= 40 && z <= 60) && (x >= 40 && x <= 60)) {
+        return true
+    } else if ((z >= 70 && z <= 100) && (x >= 70 && x <= 100)) {
         return true
     } else {
         return false
     }
-}
+};
+console.log(checkThenumbers(50, 55));
 /*
 6) 
 
